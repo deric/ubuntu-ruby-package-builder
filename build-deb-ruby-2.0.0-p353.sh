@@ -7,7 +7,7 @@ rubysrc=ruby-$rubyversion.tar.bz2
 checksum=20eb8f067d20f6b76b7e16cce2a85a55
 destdir=/tmp/install-$rubyversion
 
-apt-get -y install bzip2 wget libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev libxml2-dev libxslt1-dev automake libtool libc6-dev
+apt-get -y install build-essential bzip2 wget libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev libxml2-dev libxslt1-dev automake libtool libc6-dev
 
 if [ ! -f $rubysrc ]; then
     wget -q ftp://ftp.ruby-lang.org/pub/ruby/2.0/$rubysrc
