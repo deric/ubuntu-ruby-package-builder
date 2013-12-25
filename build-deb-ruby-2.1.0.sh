@@ -23,7 +23,7 @@ cd ruby-$rubyversion
 ./configure --prefix=/usr/local --disable-install-doc --enable-shared && make && make install DESTDIR=$destdir
 
 cd ..
-gem list -i fpm || gem install fpm
+gem list -i fpm || gem install fpm --no-ri --no-rdoc
 fpm -s dir -t deb -n ruby$version -v $rubyversion -C $destdir \
   -p ruby-VERSION_ARCH.deb -d "libstdc++6 (>= 4.4.3)" \
   -d "libc6 (>= 2.6)" -d "libffi6 (>= 3.0.10)" -d "libgdbm3 (>= 1.8.3)" \
