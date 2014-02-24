@@ -8,7 +8,7 @@ rubysrc=ruby-$rubyversion.tar.bz2
 checksum=4743c1dc48491070bae8fc8b423bc1a7
 destdir=/tmp/install-$rubyversion
 
-sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev wget
+sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev wget ruby1.9.1
 
 if [ ! -f $rubysrc ]; then
   wget -q ftp://ftp.ruby-lang.org/pub/ruby/1.9/$rubysrc
