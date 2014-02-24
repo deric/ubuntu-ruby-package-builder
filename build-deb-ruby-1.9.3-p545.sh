@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Builds on Ubuntu saucy.
 version=1.9.3
 patch=p545
 rubyversion=$version-$patch
@@ -7,7 +8,7 @@ rubysrc=ruby-$rubyversion.tar.bz2
 checksum=4743c1dc48491070bae8fc8b423bc1a7
 destdir=/tmp/install-$rubyversion
 
-sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev
+sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev wget
 
 if [ ! -f $rubysrc ]; then
   wget -q ftp://ftp.ruby-lang.org/pub/ruby/1.9/$rubysrc
